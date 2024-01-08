@@ -1,0 +1,92 @@
+.header {
+	padding: 10px 0;
+	background-color: black;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 20;
+	width: 100%;
+
+	&__inner {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+}
+
+.menu {
+	display: flex;
+	column-gap: 40px;
+	align-items: center;
+
+	&__items {
+		display: flex;
+		column-gap: 25px;
+	}
+
+	&__link {
+		color: #fff;
+		font-size: 14px;
+		text-decoration: none;
+	}
+
+	li {
+		opacity: 0.6;
+
+		&:first-child {
+			opacity: 1;
+			position: relative;
+
+			&::after {
+				content: '';
+				position: absolute;
+				left: 0;
+				bottom: -2px;
+				width: 30%;
+				height: 1px;
+				background-color: #fff;
+			}
+		}
+	}
+}
+.logo {
+	a {
+		color: #fff;
+	}
+}
+//language
+.language {
+	display: flex;
+
+	button {
+		background: none;
+		border: none;
+		color: #fff;
+		padding-right: 9px;
+		position: relative;
+		opacity: 0.6;
+		cursor: pointer;
+
+		&::after {
+			content: '|';
+			opacity: 0.6;
+			position: absolute;
+			right: 4.5px;
+			transform: translateX(50%);
+			top: -1px;
+		}
+
+		&:last-child {
+			padding-right: 0;
+
+			&::after {
+				right: 0;
+				color: black;
+			}
+		}
+	}
+
+	.language__active {
+		opacity: 1;
+	}
+}

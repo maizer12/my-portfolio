@@ -16,7 +16,7 @@ export const menu = [
 	},
 	{
 		id: 4,
-		title: 'About',
+		title: 'About Me',
 		url: '/about',
 	},
 	{
@@ -29,4 +29,4 @@ export const menu = [
 		title: 'Dashboard',
 		url: '/dashboard',
 	},
-]
+];

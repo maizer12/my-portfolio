@@ -1,7 +1,7 @@
-import style from './header.module.scss'
-import { menu } from './_config.js'
-import Link from 'next/link'
-import MainButton from '@/app/common/MainButton'
+import style from './header.module.scss';
+import { menu } from './_config.js';
+import Link from 'next/link';
+import Language from './Language';
 
 const Header = () => {
 	return (
@@ -20,11 +20,11 @@ const Header = () => {
 							</li>
 						))}
 					</ul>
-					<MainButton>Login</MainButton>
+					<Language />
 				</nav>
 			</div>
 		</header>
-	)
-}
+	);
+};
 
-export default Header
+export default Header;
