@@ -1,0 +1,43 @@
+.skills {
+	background-color: rgb(15 16 21);
+	padding-top: 50px;
+	padding-bottom: 45px;
+}
+.title {
+	margin-bottom: 45px;
+	text-align: center;
+	//color: var(--black);
+}
+
+.items {
+	display: flex;
+	justify-content: space-between;
+	margin: 0 auto;
+	max-width: 940px;
+	margin-bottom: 50px;
+}
+
+.item {
+  display: flex;
+  align-items: center;  
+  padding: 1rem;
+  border-radius: 0.5rem;
+	animation: skillAnim 3s 1;
+
+	img {
+		width: 60px;
+		max-height: 55px;
+		object-fit: contain;
+		margin-right: 1rem;  
+	}
+}
+
+@keyframes skillAnim {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+

@@ -3,7 +3,7 @@ import { menu } from './_config.js';
 import Link from 'next/link';
 import Language from './Language';
 
-const Header = () => {
+export const Header = () => {
 	return (
 		<header className={style.header}>
 			<div className={style.header__inner + ' container'}>
@@ -26,5 +26,3 @@ const Header = () => {
 		</header>
 	);
 };
-
-export default Header;

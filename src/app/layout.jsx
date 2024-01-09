@@ -1,7 +1,6 @@
 import { Inika } from 'next/font/google';
-import Header from './components/Header';
-import Footer from './components/Footer';
-import './global.scss';
+import { Header, Footer } from '../layout';
+import '../assets/styles/global.scss';
 
 const inter = Inika({ subsets: ['latin'], weight: '700', weight: '400' });
 

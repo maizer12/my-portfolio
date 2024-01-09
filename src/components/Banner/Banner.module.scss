@@ -1,6 +1,6 @@
 .banner {
-	min-height: 100vh;
-	background-image: url('../../../assets/banner.jpg');
+	height: 650px;
+	background-image: url('../../assets/images/banner.jpg');
 	background-size: cover;
 	position: relative;
 	display: flex;
@@ -14,7 +14,8 @@
 		background-size: contain;
 		background-repeat: no-repeat;
 		position: absolute;
-		background-image: url('../../../assets/bg-top.png');
+		background-color: rgba(black, .6);
+		//background-image: url('../../assets/images/bg-top.png');
 	}
 }
 .content {

@@ -1,7 +1,7 @@
-import styles from './footer.module.scss'
-import Image from 'next/image'
+import styles from './footer.module.scss';
+import Image from 'next/image';
 
-function Footer() {
+export const Footer = () => {
 	return (
 		<footer className={styles.footer}>
 			<div className={styles.footer__inner + ' container'}>
@@ -14,7 +14,5 @@ function Footer() {
 				</div>
 			</div>
 		</footer>
-	)
-}
-
-export default Footer
+	);
+};

@@ -1,8 +1,8 @@
-import { HTag } from '../HTag';
+import { HTag } from '../../common/HTag';
 import Image from 'next/image';
-import bannerImg from '/src/assets/banner-photo.png';
+import bannerImg from '/src/assets/images/banner-photo.png';
 import style from './Banner.module.scss';
-import { PTag } from '../PTag';
+import { PTag } from '../../common/PTag';
 import MainButton from '../../common/MainButton';
 import cn from 'classnames';
 
