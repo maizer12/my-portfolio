@@ -9,7 +9,7 @@ import BannerLinks from './BannerLinks';
 
 export const Banner = () => {
   return (
-    <section className={style.banner + ' pt-18'}>
+    <section className={style.banner + ' pt-18 bg-main'}>
       <div className={cn(style.content, 'max-w-[1220px]')}>
         <div className={style.text}>
           <div>
@@ -21,9 +21,9 @@ export const Banner = () => {
           </div>
           <PTag className="mb-3 mt-[-12px]">
             Hi! My name is <span className="text-primary-200">Vasil</span>, I'm a
-            <span className="text-primary-200">Front-End developer</span> with over{' '}
-            <span className="text-primary-200">3 years of experience</span>, including commercial work. Ready to{' '}
-            <span className="text-primary-200">join your team</span> and create quality websites and applications.
+            <span className="text-primary-200"> Front-End developer</span> with over
+            <span className="text-primary-200"> 3 years of experience</span>, including commercial work. Ready to
+            <span className="text-primary-200"> join your team</span> and create quality websites and applications.
           </PTag>
           <MainButton>More info</MainButton>
           <BannerLinks />

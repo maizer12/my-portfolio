@@ -9,9 +9,9 @@ export default function Home({ params }) {
     <main>
       <Banner />
       <Experience />
-      <Skills />
-      <AboutMe />
       <Projects />
+      {/* <Skills />
+      <AboutMe /> */}
     </main>
   );
 }

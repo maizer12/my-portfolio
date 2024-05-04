@@ -1,6 +1,6 @@
 import { HTag } from '@/common';
 import React from 'react';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '../common/tabs';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '../common/Tabs';
 import { Block } from './Block';
 
 const Experience = () => {
@@ -12,7 +12,7 @@ const Experience = () => {
           Experience:
         </HTag>
         <div className="mt-16">
-          <Tabs defaultValue="account" className="flex gap-20 items-start w-full">
+          <Tabs defaultValue="account" orientation="vertical" className="flex gap-20 items-start w-full">
             <TabsList className="flex flex-col h-auto">
               <TabsTrigger
                 value="account"
