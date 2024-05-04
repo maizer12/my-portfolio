@@ -1,7 +1,6 @@
 .p {
-	color: var(--grey-light);
-	font-size: 18px;
-	font-style: normal;
-	font-weight: 400;
-	line-height: normal;
+  color: var(--grey-light);
+  font-style: normal;
+  font-weight: 400;
+  @apply text-light-400 text-base;
 }

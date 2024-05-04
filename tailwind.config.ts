@@ -20,6 +20,7 @@ const config: Config = {
         },
         light: {
           200: '#9096A1',
+          400: '#C7C8C9',
           900: '#E9E9E9',
         },
         dark: {

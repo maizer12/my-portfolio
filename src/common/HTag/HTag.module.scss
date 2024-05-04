@@ -1,17 +1,20 @@
 .title {
-	line-height: normal;
-	font-weight: 700;
-	color: var(--white);
-	font-variant-numeric: lining-nums proportional-nums;
+  line-height: normal;
+  font-weight: 700;
+  color: var(--white);
+  font-variant-numeric: lining-nums proportional-nums;
+
+  // @apply after:bg-primary-200 after:absolute relative after:h-1 pb-1 after:rounded-[20px] after:w-[65%]
+  // after:bottom-0 after:left-0;
 }
 
 .h1 {
-	font-size: 41px;
-	font-style: normal;
+  font-size: 41px;
+  font-style: normal;
 }
 .h2 {
-	font-size: 32px;
+  font-size: 32px;
 }
 .h5 {
-	font-size: 21px;
+  font-size: 21px;
 }

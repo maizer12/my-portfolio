@@ -1,5 +1,10 @@
+import { ReactNode } from 'react';
 import style from './PTag.module.scss';
 
-export const PTag = ({ children }) => {
-	return <p className={style.p}>{children}</p>;
+// interface IProps {
+//   children: ReactNode;
+// }
+
+export const PTag = ({ children, className }) => {
+  return <p className={style.p + ' ' + className}>{children}</p>;
 };

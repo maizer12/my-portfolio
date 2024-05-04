@@ -1,8 +1,13 @@
 .banner {
-  //background-image: url('../../assets/images/banner.jpg');
   background-size: cover;
-  position: relative;
-  @apply h-screen flex items-center justify-center;
+  @apply h-screen flex items-center justify-center relative;
+  background: linear-gradient(
+    154.89deg,
+    rgb(29, 29, 29) 4.326%,
+    rgb(71, 56, 107) 31.177%,
+    rgb(69, 55, 104) 42.218%,
+    rgb(29, 29, 29) 75.91%
+  );
 
   &::before {
     content: '';
@@ -11,17 +16,19 @@
     background-size: contain;
     background-repeat: no-repeat;
     position: absolute;
+
     background-color: rgba(black, 0.6);
-    //background-image: url('../../assets/images/bg-top.png');
   }
 }
+
 .content {
   position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  @apply p-10 my-24 bg-dark-700 border-4 border-dark-400 gap-7;
+  @apply p-10 my-24 bg-dark-700 border border-primary-700 gap-7;
 }
+
 .text {
   display: flex;
   flex-direction: column;
