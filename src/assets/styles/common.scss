@@ -19,3 +19,6 @@
     @apply top-0;
   }
 }
+.tab-item[data-state='active'] {
+  @apply text-primary-200 border-primary-200;
+}

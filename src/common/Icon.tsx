@@ -7,5 +7,5 @@ interface IProps {
 }
 
 export const Icon = ({ icon, className = '' }: IProps) => {
-  return <CIcon icon={icon} size="xxl" className={'fill-primary-200  w-5 mb-1 ' + className} />;
+  return <CIcon icon={icon} size="xxl" className={'mb-1 ' + className} />;
 };

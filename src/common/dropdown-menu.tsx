@@ -18,7 +18,7 @@ function Dropdown() {
   return (
     <div>
       <button className="text-light-900 p-2.5 text-[16px] bg-dark-700 min-w-[144px] border-primary-200 border flex items-center gap-3 justify-center">
-        Filter: ALL <Icon icon={cibCodeigniter} />
+        Filter: ALL <Icon icon={cibCodeigniter} className="w-6 fill-primary-200" />
       </button>
     </div>
   );

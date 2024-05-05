@@ -8,7 +8,7 @@ import { SkillsArr } from './constants';
 
 const Skills = () => {
   return (
-    <section className="bg-dark-900 py-32">
+    <section className="bg-dark-700 py-32">
       <HTag tag="h2" className="text-center mb-4">
         My Skills:
       </HTag>
@@ -24,10 +24,10 @@ const Skills = () => {
         <ul className="flex gap-7 flex-wrap max-w-[670px]">
           {SkillsArr.map((e, i) => (
             <li
-              className="bg-dark-700 w-32 rounded-[5px] border border-dark-400 h-32 flex justify-center items-center hover:border-primary-200 duration-500"
+              className="bg-dark-900 w-32 rounded-[5px] border border-dark-400 h-32 flex justify-center items-center hover:border-primary-200 duration-500"
               key={i}
             >
-              <Icon icon={e} className="w-16 h-34" />
+              <Icon icon={e} className="w-14 fill-primary-200" />
             </li>
           ))}
         </ul>
