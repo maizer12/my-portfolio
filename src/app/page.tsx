@@ -10,8 +10,8 @@ export default function Home({ params }) {
       <Banner />
       <Experience />
       <Projects />
-      {/* <Skills />
-      <AboutMe /> */}
+      <Skills />
+      {/* <AboutMe /> */}
     </main>
   );
 }
