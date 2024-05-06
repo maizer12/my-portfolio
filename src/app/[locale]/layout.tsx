@@ -1,6 +1,6 @@
 import { Inika } from 'next/font/google';
-import { Header, Footer } from '../layout';
-import '../assets/styles/global.scss';
+import { Header, Footer } from '../../layout';
+import '../../assets/styles/global.scss';
 import './global.css';
 import { Metadata } from 'next';
 import { ReactNode } from 'react';
@@ -17,12 +17,14 @@ export const metadata: Metadata = {
 
 interface IProps {
   children: ReactNode;
+  params: { locale: string };
 }
 
-export default function RootLayout({ children }: IProps) {
+export default function RootLayout({ children, params: { locale } }: IProps) {
   return (
     <html lang="en">
       <body className={inter.className}>
+        params: {locale}
         <Header />
         <main className="main">{children}</main>
         <Footer />

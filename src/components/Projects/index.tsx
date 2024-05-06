@@ -31,7 +31,7 @@ const Projects = () => {
                 </Link>
                 <div className="flex w-fit gap-3">
                   {e.icons.map((e, i) => (
-                    <Icon icon={e.icon} key={i} className={'w-8 ' + `fill-${e.fill}`} />
+                    <Icon icon={e.icon} key={i} className={'w-8 ' + `${e.fill}`} />
                   ))}
                 </div>
               </div>
