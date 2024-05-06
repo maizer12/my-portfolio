@@ -13,6 +13,7 @@ import {
   cibWebpack,
   cibWordpress,
 } from '@coreui/icons';
+import { cibGithub, cibLinkedin, cibTelegram } from '@coreui/icons';
 
 export const experienceTabs = {
   triggers: [
@@ -64,3 +65,9 @@ export const experienceTabs = {
     },
   ],
 };
+
+export const contactsArray = [
+  { link: 'https://www.linkedin.com/in/vasil-bazhiv-565a5424b/', icon: cibLinkedin, name: 'Linkedin' },
+  { link: 'https://t.me/vasilbazhiv', icon: cibTelegram, name: 'Telegram' },
+  { link: 'https://github.com/maizer12', icon: cibGithub, name: 'GitHub' },
+];

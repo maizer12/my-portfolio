@@ -6,14 +6,14 @@
   position: relative;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  //align-items: center;
   @apply p-10 my-24 bg-dark-700 border border-primary-700 gap-7;
 }
 
 .text {
   display: flex;
   flex-direction: column;
-  row-gap: 29px;
   width: 100%;
   max-width: 493px;
+  @apply pt-12 gap-8;
 }
