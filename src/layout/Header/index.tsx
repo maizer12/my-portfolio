@@ -1,5 +1,5 @@
 import style from './header.module.scss';
-import { menu } from './_config.js';
+import { menu } from './_config';
 import Link from 'next/link';
 import Language from './Language';
 import Image from 'next/image';
