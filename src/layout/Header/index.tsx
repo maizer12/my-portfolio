@@ -9,9 +9,9 @@ export const Header = () => {
     <header className="py-2 bg-dark-900 fixed top-0 w-full z-10">
       <div className="flex items-center justify-between container">
         <h2 className={style.logo}>
-          {/* <a href="/"> */}
-          <Image src="/logo.png" width={60} height={60} alt="logo" />
-          {/* </a> */}
+          <Link href="/">
+            <Image src="/logo.png" width={60} height={60} alt="logo" />
+          </Link>
         </h2>
         <nav className={style.menu}>
           <ul className={style.menu__items}>

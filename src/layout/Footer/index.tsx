@@ -7,7 +7,8 @@ export const Footer = () => {
   return (
     <footer className="bg-dark-900 py-1">
       <div className={styles.footer__inner + ' container'}>
-        <p className="text-md text-light-900">Copyright ©{year} MyApp. All rights reserved</p>
+        <p className="text-md text-light-900">Copyright ©{year} my portfolio. All rights reserved</p>
+        <div className="flex"></div>
       </div>
     </footer>
   );
