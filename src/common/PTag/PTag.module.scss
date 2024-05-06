@@ -1,6 +1,9 @@
 .p {
   color: var(--grey-light);
   font-style: normal;
-  font-weight: 400;
-  @apply text-light-400 text-base;
+  @apply text-light-400 font-normal text-base;
+
+  span {
+    @apply text-primary-200;
+  }
 }

@@ -27,7 +27,7 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     "src/common/index.js",
-    "src/common/PTag/index.jsx"
+    "src/common/PTag/index.tsx"
   ],
   "exclude": ["node_modules"]
 }
