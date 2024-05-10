@@ -1,6 +1,6 @@
 import { HTag } from '@/common';
 import React from 'react';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '../common/Tabs';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/common/Tabs';
 import { Block } from './Block';
 import { experienceTabs } from '@/_config';
 import { Icon } from '@/common/Icon';
@@ -35,7 +35,7 @@ const Experience = () => {
               ))}
             </TabsList>
             {experienceTabs.contents.map((e) => (
-              <TabsContent value={e.value} className="p-0 w-full">
+              <TabsContent value={e.value} className="p-0 w-full" key={e.company}>
                 <div className="flex justify-between items-center mb-6">
                   <h4 className="block text-light-900 min-w-[240px] text-start font-bold font-inter text-2xl">
                     {e.position}
@@ -52,8 +52,8 @@ const Experience = () => {
                   {e.desc}
                 </h5>
                 <div className="flex w-fit mt-4 ml-auto gap-2">
-                  {e.icons?.map((e) => (
-                    <Icon icon={e} className="w-7 fill-light-400" />
+                  {e.icons?.map((e, i) => (
+                    <Icon icon={e} className="w-7 fill-light-400" key={i} />
                   ))}
                 </div>
               </TabsContent>

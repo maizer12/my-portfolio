@@ -27,7 +27,7 @@ const Projects = () => {
         </div>
         <ul className="flex-wrap gap-6 max-w-[1224px] mx-auto flex">
           {projectsArr.map((e) => (
-            <li className="border w-full max-w-[380px] min-w-[320px] border-primary-200 bg-dark-700 p-8">
+            <li className="border w-full max-w-[380px] min-w-[320px] border-primary-200 bg-dark-700 p-8" key={e.title}>
               <HTag tag="h5" className="mb-4">
                 {e.title}
               </HTag>
