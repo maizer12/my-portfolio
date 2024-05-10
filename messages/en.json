@@ -3,9 +3,11 @@
     "title": "Home"
   },
   "banner": {
+    "openCV": "Open CV",
     "fullName": "Vasil Bazhiv",
     "role": "Front-End Developer",
     "description": "Hi! My name is <span>Vasil</span>, I'm a <span>Front-End Developer</span> with over <span>3 years of experience</span>, including commercial work. Ready to <span>join your team</span> and create quality websites and applications.",
     "btnText": "More info"
-  }
+  },
+  "experienceTitle": "Experience:"
 }

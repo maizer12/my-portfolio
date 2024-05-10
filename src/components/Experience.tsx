@@ -5,14 +5,17 @@ import { Block } from './Block';
 import { experienceTabs } from '@/_config';
 import { Icon } from '@/common/Icon';
 import { cilCalendar } from '@coreui/icons';
+import { useTranslations } from 'next-intl';
 
 const Experience = () => {
+  const t = useTranslations();
+
   return (
     <section className="bg-dark-700 py-24">
       <div className="max-w-[1220px] mx-auto w-full px-3 relative">
         <Block />
         <HTag tag="h2" className="mb-4">
-          Experience:
+          {t('experienceTitle')}
         </HTag>
         <div className="mt-16">
           <Tabs

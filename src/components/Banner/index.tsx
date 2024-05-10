@@ -23,7 +23,7 @@ export const Banner = () => {
             target="_blank"
           >
             <Icon icon={cilFile} className="w-6" />
-            Open CV
+            {t('openCV')}
           </a>
           <div>
             <p className="text-primary-200 font-inter font-bold">Hello, I'm:</p>

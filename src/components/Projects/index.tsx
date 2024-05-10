@@ -9,13 +9,22 @@ const Projects = () => {
   return (
     <section className="py-32 bg-main">
       <div className="container relative z-2">
-        <div className="flex mb-24 justify-between max-w-[1324px] mx-auto">
-          <HTag tag="h2" className="text-center">
-            My Projects:
-          </HTag>
-          <DropdownMenu />
+        <div className="mb-16 max-w-[1324px]">
+          <div className="flex justify-between  mx-auto mb-12">
+            <HTag tag="h2" className="text-center">
+              My Projects:
+            </HTag>
+            <DropdownMenu />
+          </div>
+          <ul className="max-w-[1224px] mx-auto flex gap-3">
+            <li className="border-primary-200 bg-primary-700 border w-fit min-w-[78px] rounded-md text-light-900 flex justify-center py-1">
+              All
+            </li>
+            <li className="border-primary-200 border w-fit min-w-[78px] rounded-md text-light-900 flex justify-center py-1 px-3">
+              Web Application
+            </li>
+          </ul>
         </div>
-
         <ul className="flex-wrap gap-6 max-w-[1224px] mx-auto flex">
           {projectsArr.map((e) => (
             <li className="border w-full max-w-[380px] min-w-[320px] border-primary-200 bg-dark-700 p-8">
