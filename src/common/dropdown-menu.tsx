@@ -11,9 +11,9 @@ function Dropdown() {
   const options = ['Опция 1', 'Опция 2', 'Опция 3'];
 
   // Функция для изменения выбранного элемента
-  const handleSelect = (event) => {
-    setSelectedItem(event.target.value);
-  };
+  // const handleSelect = (event) => {
+  //   setSelectedItem(event.target.value);
+  // };
 
   return (
     <div>
