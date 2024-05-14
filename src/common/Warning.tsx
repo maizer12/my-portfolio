@@ -6,5 +6,5 @@ interface IProps {
 }
 
 export const Warning = ({ className = '', children }: IProps) => {
-  return <div className={'bg-black/60 p-4 text-light-900 ' + className}>{children}</div>;
+  return <div className={'bg-dark-900 p-4 text-light-900 border border-primary-700 ' + className}>{children}</div>;
 };

@@ -19,7 +19,7 @@ const Projects = ({ filter }: IProps) => {
   return (
     <section className="py-32 bg-main">
       <div className="container relative z-2">
-        <div className="mb-16 max-w-[1324px]">
+        <div className="mb-16 max-w-[1324px] mx-auto">
           <div className="flex justify-between  mx-auto mb-12">
             <HTag tag="h2" className="text-center">
               My Projects:
