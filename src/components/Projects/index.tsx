@@ -1,9 +1,11 @@
 import { HTag } from '@/common';
 import MainButton from '@/common/MainButton';
 import Link from 'next/link';
-import DropdownMenu from '../../common/dropdown-menu';
+import DropdownMenu from '../../common/Dropdown';
 import { projectsArr } from './constants';
 import { Icon } from '@/common/Icon';
+import { Warning } from '@/common/Warning';
+import { OctagonAlert } from 'lucide-react';
 
 const Projects = () => {
   return (
@@ -16,6 +18,12 @@ const Projects = () => {
             </HTag>
             <DropdownMenu />
           </div>
+          <Warning className="mb-7">
+            <OctagonAlert className="inline mr-2" />
+            Please be aware that the projects listed below are pet projects, as I am currently only able to add personal
+            projects to this section. Each project showcases different skills and technologies I've worked with. For
+            professional experience and more detailed information, please refer to the other sections of my portfolio.
+          </Warning>
           <ul className="max-w-[1224px] mx-auto flex gap-3">
             <li className="border-primary-200 bg-primary-700 border w-fit min-w-[78px] rounded-md text-light-900 flex justify-center py-1">
               All
