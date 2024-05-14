@@ -4,13 +4,13 @@ import Projects from '../../components/Projects';
 import Experience from '../../components/Experience';
 import Dropdown from '@/common/Dropdown';
 
-export default function Home({ params, searchParams }: any) {
-  console.log(searchParams);
+export default function Home({ searchParams }: { searchParams: { filter: string } }) {
+  console.log(searchParams.filter);
   return (
     <main>
       <Banner />
       <Experience />
-      <Projects />
+      <Projects filter={searchParams.filter} />
       <Skills />
       {/* <AboutMe /> */}
     </main>

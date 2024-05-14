@@ -7,7 +7,15 @@ import { Icon } from '@/common/Icon';
 import { Warning } from '@/common/Warning';
 import { OctagonAlert } from 'lucide-react';
 
-const Projects = () => {
+interface IProps {
+  filter?: string;
+}
+
+const Projects = ({ filter }: IProps) => {
+  const items = filter?.length
+    ? projectsArr.filter((e) => !!e.technologies.find((name) => name.toUpperCase() === filter.toUpperCase()))
+    : projectsArr;
+
   return (
     <section className="py-32 bg-main">
       <div className="container relative z-2">
@@ -34,7 +42,7 @@ const Projects = () => {
           </ul>
         </div>
         <ul className="flex-wrap gap-6 max-w-[1224px] mx-auto flex">
-          {projectsArr.map((e) => (
+          {items.map((e) => (
             <li className="border w-full max-w-[380px] min-w-[320px] border-primary-200 bg-dark-700 p-8" key={e.title}>
               <HTag tag="h5" className="mb-4">
                 {e.title}
