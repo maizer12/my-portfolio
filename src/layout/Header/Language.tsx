@@ -4,19 +4,23 @@ import style from './header.module.scss';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
+const languages = [
+  { href: 'ua', label: 'UA' },
+  { href: 'en', label: 'EN' },
+];
+
 function Language() {
   const pathname = usePathname();
   const check = (lan: string) => pathname.search(lan) >= 0;
+
   return (
     <div className={style.language}>
-      <Link href="ua" className={check('ua') ? style.language__active : ''}>
-        UA
-      </Link>
-      <Link href="en" className={check('en') ? style.language__active : ''}>
-        UE
-      </Link>
+      {languages.map((lang) => (
+        <Link key={lang.href} href={lang.href} className={check(lang.href) ? style.language__active : ''}>
+          {lang.label}
+        </Link>
+      ))}
     </div>
   );
 }
-
 export default Language;

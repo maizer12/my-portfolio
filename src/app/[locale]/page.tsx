@@ -5,14 +5,12 @@ import Experience from '../../components/Experience';
 import Dropdown from '@/common/Dropdown';
 
 export default function Home({ searchParams }: { searchParams: { filter: string } }) {
-  console.log(searchParams.filter);
   return (
     <main>
-      <Banner />
+      {/* <Banner />
       <Experience />
       <Projects filter={searchParams.filter} />
-      <Skills />
-      {/* <AboutMe /> */}
+      <Skills /> */}
     </main>
   );
 }

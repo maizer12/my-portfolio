@@ -1,18 +1,11 @@
 .menu {
-  display: flex;
-  column-gap: 40px;
-  align-items: center;
-
   &__items {
     display: flex;
     column-gap: 25px;
   }
 
   &__link {
-    @apply text-light-400;
-    font-size: 14px;
-    text-decoration: none;
-    position: relative;
+    @apply md:text-light-400 md:text-base relative;
 
     &::after {
       content: '';
@@ -29,10 +22,10 @@
 
     &:hover {
       &::after {
-        transform: scaleX(1);
         transform-origin: bottom left;
       }
     }
+    @apply duration-500 md:hover:after:scale-x-[1px] md:hover:text-light-900;
   }
 
   li {
@@ -60,11 +53,12 @@
   a {
     background: none;
     border: none;
-    color: #fff;
     padding-right: 9px;
     position: relative;
     opacity: 0.6;
     cursor: pointer;
+
+    @apply md:text-white md:mt-0 mt-6 md:text-lg text-2xl;
 
     &::after {
       content: '|';
@@ -81,6 +75,7 @@
       &::after {
         right: 0;
         color: black;
+        @apply hidden;
       }
     }
   }
