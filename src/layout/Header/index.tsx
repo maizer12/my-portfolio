@@ -30,7 +30,7 @@ export const Header = () => {
           } transition-transform duration-300 ease-in-out md:static md:bg-transparent md:translate-x-0`}
           onClick={toggleMenu}
         >
-          <div className="bg-white p-10 w-[75%] h-full ml-auto md:w-fit md:h-auto md:bg-transparent md:p-0 md:flex md:items-center">
+          <div className="bg-light-900 p-10 w-[75%] h-full ml-auto md:w-fit md:h-auto md:bg-transparent md:p-0 md:flex md:items-center md:gap-8">
             <ul className="md:flex mt-8 md:gap-5 md:mt-0">
               {menu.map((e) => (
                 <li className={style.menu__item} key={e.id}>

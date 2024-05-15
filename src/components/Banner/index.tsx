@@ -36,14 +36,17 @@ export const Banner = () => {
           <MainButton>{t('btnText')}</MainButton>
           <BannerLinks />
         </div>
-        <Image
-          src={bannerImg.src}
-          width={619}
-          height={567}
-          alt="Developer picture"
-          title="Developer picture!"
-          data-twe-toggle="tooltip"
-        />
+        <div className="">
+          <Image
+            src={bannerImg.src}
+            className=""
+            width={619}
+            height={567}
+            alt="Developer picture"
+            title="Developer picture!"
+            data-twe-toggle="tooltip"
+          />
+        </div>
       </div>
     </section>
   );

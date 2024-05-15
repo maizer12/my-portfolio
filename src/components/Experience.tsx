@@ -11,23 +11,23 @@ const Experience = () => {
   const t = useTranslations();
 
   return (
-    <section className="bg-dark-700 py-24">
+    <section className="bg-dark-700 p-3 py-16 md:p-0 md:py-24">
       <div className="max-w-[1220px] mx-auto w-full px-3 relative">
         <Block />
         <HTag tag="h2" className="mb-4">
           {t('experienceTitle')}
         </HTag>
-        <div className="mt-16">
+        <div className="md:mt-16 mt-12">
           <Tabs
             defaultValue={experienceTabs.triggers[0].value}
             orientation="vertical"
-            className="flex gap-20 items-start w-full"
+            className="md:flex gap-20 items-start w-full"
           >
-            <TabsList className="flex flex-col h-auto">
+            <TabsList className="flex md:flex-col h-auto">
               {experienceTabs.triggers.map((e) => (
                 <TabsTrigger
                   value={e.value}
-                  className="block pl-8 py-5 tab-item  bg-dark-900 border-l-2 min-w-[240px] text-start font-bold font-inter text-1xl text-light-900"
+                  className="block md:pl-8 py-5 tab-item  bg-dark-900 border-b md:border-l-2 w-full text-center  md:min-w-[240px] md:w-auto md:text-start font-bold font-inter md:text-1xl text-light-900 md:border-b-0 "
                   key={e.value}
                 >
                   {e.name}
@@ -35,9 +35,9 @@ const Experience = () => {
               ))}
             </TabsList>
             {experienceTabs.contents.map((e) => (
-              <TabsContent value={e.value} className="p-0 w-full" key={e.company}>
-                <div className="flex justify-between items-center mb-6">
-                  <h4 className="block text-light-900 min-w-[240px] text-start font-bold font-inter text-2xl">
+              <TabsContent value={e.value} className="p-0 w-full mt-6 md:mt-0" key={e.company}>
+                <div className="justify-between items-center mb-6 md:flex">
+                  <h4 className="block text-light-900 min-w-[240px] text-start font-bold font-inter text-2xl mb-4 md:m-0">
                     {e.position}
                   </h4>
                   <h5 className="text-light-400 text-start font-bold font-inter text-1xl flex items-center gap-2">

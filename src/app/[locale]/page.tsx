@@ -7,10 +7,10 @@ import Dropdown from '@/common/Dropdown';
 export default function Home({ searchParams }: { searchParams: { filter: string } }) {
   return (
     <main>
-      {/* <Banner />
+      <Banner />
       <Experience />
       <Projects filter={searchParams.filter} />
-      <Skills /> */}
+      {/*<Skills /> */}
     </main>
   );
 }

@@ -1,12 +1,11 @@
 .banner {
-  @apply h-screen flex items-center justify-center relative;
+  @apply md:h-screen flex items-center justify-center relative p-3;
 }
 
 .content {
   position: relative;
-  display: flex;
   justify-content: space-between;
-  @apply p-10 my-24 bg-dark-700 border border-primary-700 gap-7;
+  @apply p-4 md:p-10 my-20 md:my-24 md:flex bg-dark-700 border border-primary-700 gap-7;
 }
 
 .text {
@@ -14,5 +13,5 @@
   flex-direction: column;
   width: 100%;
   max-width: 493px;
-  @apply pt-12 gap-8;
+  @apply md:pt-12 gap-8 mb-10 md:mb-0 md:min-w-[320px];
 }
