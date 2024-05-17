@@ -1,11 +1,11 @@
 'use client';
 import { useState } from 'react';
 import style from './header.module.scss';
-import { menu } from './_config';
 import Link from 'next/link';
 import Language from './Language';
 import Image from 'next/image';
 import BurgerButton from './BurgerButton';
+import { Menu } from './Menu';
 
 export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -31,15 +31,7 @@ export const Header = () => {
           onClick={toggleMenu}
         >
           <div className="bg-light-900 p-10 w-[75%] h-full ml-auto md:w-fit md:h-auto md:bg-transparent md:p-0 md:flex md:items-center md:gap-8">
-            <ul className="md:flex mt-8 md:gap-5 md:mt-0">
-              {menu.map((e) => (
-                <li className={style.menu__item} key={e.id}>
-                  <Link href={e.url} className={style.menu__link + ' text-dark-900 mb-2 block text-xl md:mb-0'}>
-                    {e.title}
-                  </Link>
-                </li>
-              ))}
-            </ul>
+            <Menu />
             <div className="mt-8 md:mt-0 md:ml-4">
               <Language />
             </div>

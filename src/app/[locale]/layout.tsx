@@ -4,6 +4,8 @@ import '../../assets/styles/global.scss';
 import './global.css';
 import { Metadata } from 'next';
 import { ReactNode } from 'react';
+import { NextIntlClientProvider } from 'next-intl';
+import { getMessages } from 'next-intl/server';
 
 const inter = Inika({ subsets: ['latin'], weight: '700' });
 
@@ -20,14 +22,18 @@ interface IProps {
   params: { locale: string };
 }
 
-export default function RootLayout({ children, params: { locale } }: IProps) {
+export default async function RootLayout({ children, params: { locale } }: IProps) {
+  const messages = await getMessages();
+
   return (
-    <html lang="en">
+    <html lang={locale}>
       <body className={inter.className}>
-        params: {locale}
-        <Header />
-        <main className="main">{children}</main>
-        <Footer />
+        <NextIntlClientProvider messages={messages}>
+          params: {locale}
+          <Header />
+          <main className="main">{children}</main>
+          <Footer />
+        </NextIntlClientProvider>
       </body>
     </html>
   );

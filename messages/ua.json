@@ -1,6 +1,11 @@
 {
-  "mainPage": {
-    "title": "Головна"
+  "menu": {
+    "home": "Головна",
+    "portfolio": "Портфоліо",
+    "blog": "Блог",
+    "aboutMe": "Про мене",
+    "contact": "Контакт",
+    "dashboard": "Панель управління"
   },
   "banner": {
     "openCV": "Відкрити резюме",

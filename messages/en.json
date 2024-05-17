@@ -1,6 +1,11 @@
 {
-  "mainPage": {
-    "title": "Home"
+  "menu": {
+    "home": "Home",
+    "portfolio": "Portfolio",
+    "blog": "Blog",
+    "aboutMe": "About Me",
+    "contact": "Contact",
+    "dashboard": "Dashboard"
   },
   "banner": {
     "openCV": "Open CV",
