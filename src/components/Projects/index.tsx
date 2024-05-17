@@ -6,12 +6,16 @@ import { projectsArr } from './constants';
 import { Icon } from '@/common/Icon';
 import { Warning } from '@/common/Warning';
 import { OctagonAlert } from 'lucide-react';
+import { useTranslations } from 'next-intl';
+import Badge from '@/common/Badge';
 
 interface IProps {
   filter?: string;
 }
 
 const Projects = ({ filter }: IProps) => {
+  const t = useTranslations('projects');
+
   const items = filter?.length
     ? projectsArr.filter((e) => !!e.technologies.find((name) => name.toUpperCase() === filter.toUpperCase()))
     : projectsArr;
@@ -22,28 +26,22 @@ const Projects = ({ filter }: IProps) => {
         <div className="mb-16 max-w-[1324px] mx-auto">
           <div className="flex justify-between  mx-auto mb-12">
             <HTag tag="h2" className="text-center">
-              My Projects:
+              {t('title')}
             </HTag>
             <DropdownMenu />
           </div>
           <Warning className="mb-7">
             <OctagonAlert className="inline mr-2" />
-            Please be aware that the projects listed below are pet projects, as I am currently only able to add personal
-            projects to this section. Each project showcases different skills and technologies I've worked with. For
-            professional experience and more detailed information, please refer to the other sections of my portfolio.
+            {t('warning')}
           </Warning>
           <ul className="max-w-[1224px] mx-auto flex gap-3">
-            <li className="border-primary-200 bg-primary-700 border w-fit min-w-[78px] rounded-md text-light-900 flex justify-center py-1">
-              All
-            </li>
-            <li className="border-primary-200 border w-fit min-w-[78px] rounded-md text-light-900 flex justify-center py-1 px-3">
-              Web Application
-            </li>
+            <Badge isActive={true}>All</Badge>
+            <Badge>Web Application</Badge>
           </ul>
         </div>
-        <ul className="flex-wrap gap-6 max-w-[1224px] mx-auto flex w-fit justify-center">
+        <ul className="flex-wrap gap-6 max-w-[1224px] mx-auto grid md:grid-cols-2 lg:grid-cols-3 w-fit justify-center">
           {items.map((e) => (
-            <li className="border w-full max-w-[380px] min-w-[320px] border-primary-200 bg-dark-700 p-8" key={e.title}>
+            <li className="border w-full min-w-[320px] border-primary-200 bg-dark-700 p-8" key={e.title}>
               <HTag tag="h5" className="mb-4">
                 {e.title}
               </HTag>

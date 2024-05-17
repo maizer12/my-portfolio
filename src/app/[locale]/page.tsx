@@ -10,7 +10,7 @@ export default function Home({ searchParams }: { searchParams: { filter: string 
       <Banner />
       <Experience />
       <Projects filter={searchParams.filter} />
-      {/*<Skills /> */}
+      <Skills />
     </main>
   );
 }

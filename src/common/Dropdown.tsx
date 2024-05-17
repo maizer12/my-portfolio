@@ -1,8 +1,7 @@
 'use client';
 import React, { useState, useEffect, useRef } from 'react';
-import { useRouter, usePathname, useSearchParams } from 'next/navigation';
 import { Icon } from '../common/Icon';
-import { cibCodeClimate, cibCodeigniter, cibXcode } from '@coreui/icons';
+import { cibCodeClimate } from '@coreui/icons';
 import {
   cibReact,
   cibNextJs,
@@ -15,14 +14,13 @@ import {
 } from '@coreui/icons';
 
 import { SelectItemType } from '@/models/SelectItem.type';
+import useUpdateQueryParams from '@/utils/updateQueryParams';
 
 function Dropdown() {
   const [selectedItem, setSelectedItem] = useState({ value: '', label: 'All', icon: cibCodeClimate });
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
-  const router = useRouter();
-  const pathname = usePathname();
-  const searchParams = useSearchParams();
+  const updateQueryParams = useUpdateQueryParams();
 
   const options: SelectItemType[] = [
     { value: '', label: 'All', icon: cibCodeClimate, fill: 'fill-slate-200' },
@@ -39,9 +37,7 @@ function Dropdown() {
   const handleSelect = (option: SelectItemType) => {
     setSelectedItem(option);
     setIsOpen(false);
-    const params = new URLSearchParams(searchParams.toString());
-    params.set('filter', option.value);
-    router.replace(`${pathname}?${params.toString()}`, { scroll: false });
+    updateQueryParams('filter', option.value);
   };
 
   const handleClickOutside = (event: MouseEvent) => {
