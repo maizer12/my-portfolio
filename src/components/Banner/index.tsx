@@ -14,9 +14,9 @@ export const Banner = () => {
   const t = useTranslations('banner');
 
   return (
-    <section className={style.banner + ' pt-18 bg-main'}>
+    <section className={cn(style.banner, 'pt-18 bg-main')}>
       <div className={cn(style.content, 'max-w-[1220px]')}>
-        <div className={style.text}>
+        <div className={cn(style.text, style.textFadeIn)}>
           <a
             href="cv.pdf"
             className="border p-2 px-3 w-fit border-primary-200 text-sm text-light-400 flex min-w-[134px] items-center gap-4 bg-dark-900 duration-500 rounded-sm ml-auto hover:border-light-400"
@@ -36,7 +36,7 @@ export const Banner = () => {
           <MainButton>{t('btnText')}</MainButton>
           <BannerLinks />
         </div>
-        <div className="">
+        <div className={style.imageSlideIn}>
           <Image
             src={bannerImg.src}
             className=""
