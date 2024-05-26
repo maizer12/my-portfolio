@@ -27,6 +27,10 @@
   animation: fadeIn 2s ease-in-out;
 }
 
+.fadeInSlow {
+  animation: fadeIn 700ms ease-in-out;
+}
+
 /* Slide-In Animation */
 @keyframes slideInLeft {
   from {

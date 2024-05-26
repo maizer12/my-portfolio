@@ -1,6 +1,6 @@
 import { HTag } from '@/common';
 import MainButton from '@/common/MainButton';
-import Link from 'next/link';
+import { Link } from '../../navigation';
 import DropdownMenu from '../../common/Dropdown';
 import { projectsArr } from './constants';
 import { Icon } from '@/common/Icon';
@@ -49,7 +49,7 @@ const Projects = ({ filter }: IProps) => {
                 {e.desc}
               </h5>
               <div className="flex items-center justify-between ">
-                <Link href="/" className="text-primary-200 block mt-2">
+                <Link href={'/project/' + e.id} className="text-primary-200 block mt-2">
                   More info
                 </Link>
                 <div className="flex w-fit gap-3">
