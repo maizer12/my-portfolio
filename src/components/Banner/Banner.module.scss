@@ -3,9 +3,8 @@
 }
 
 .content {
-  position: relative;
   justify-content: space-between;
-  @apply p-4 md:p-10 my-20 md:my-24 md:flex bg-dark-700 border border-primary-700 gap-7;
+  @apply md:flex  gap-7;
 }
 
 .text {

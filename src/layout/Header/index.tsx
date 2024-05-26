@@ -15,7 +15,7 @@ export const Header = () => {
   };
 
   return (
-    <header className="py-2 bg-dark-900 fixed top-0 w-full z-10">
+    <header className="py-2 bg-dark-900 fixed top-0 w-full z-40">
       <div className="flex items-center justify-between container">
         <h2 className={style.logo}>
           <Link href="/">

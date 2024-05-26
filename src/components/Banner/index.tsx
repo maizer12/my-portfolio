@@ -15,7 +15,7 @@ export const Banner = () => {
 
   return (
     <section className={cn(style.banner, 'pt-18 bg-main')}>
-      <div className={cn(style.content, 'max-w-[1220px]')}>
+      <div className={cn(style.content, 'max-w-[1220px] banner')}>
         <div className={cn(style.text, style.textFadeIn)}>
           <a
             href="cv.pdf"
