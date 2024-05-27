@@ -37,6 +37,7 @@
   },
   "projects": {
     "title": "My Projects:",
+    "notFound": "Not found, please try other filters!",
     "warning": "Please be aware that the projects listed below are pet projects, as I am currently only able to add personal projects to this section. Each project showcases different skills and technologies I've worked with. For professional experience and more detailed information, please refer to the other sections of my portfolio."
   }
 }
