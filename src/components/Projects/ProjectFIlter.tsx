@@ -25,7 +25,7 @@ const ProjectFIlter: FC<IProps> = ({ type }) => {
   };
 
   return (
-    <div className="max-w-[1224px] mx-auto flex gap-3">
+    <div className="max-w-[1324px] mx-auto flex gap-3">
       {badges.map((e) => (
         <button onClick={() => toggleTechDropdown(e.value)}>
           <Badge isActive={e.value === type} key={e.value}>

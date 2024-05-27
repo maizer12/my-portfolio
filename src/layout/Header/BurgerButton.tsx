@@ -5,6 +5,8 @@ const BurgerButton = ({ isOpen, onClick }: { isOpen: boolean; onClick: () => voi
   return (
     <button
       className="absolute right-4 top-4 flex flex-col items-center justify-center w-12 h-12 z-10 md:hidden"
+      name="Burger button"
+      title="Burger button"
       onClick={onClick}
     >
       <span

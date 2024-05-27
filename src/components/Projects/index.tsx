@@ -16,9 +16,13 @@ interface IProps {
 const Projects = ({ filter, type }: IProps) => {
   const t = useTranslations('projects');
 
-  const items = filter?.length
-    ? projectsArr.filter((e) => !!e.technologies.find((name) => name.toUpperCase() === filter.toUpperCase()))
-    : projectsArr;
+  const items = projectsArr.filter((e) => {
+    const filterMatch = !filter || e.technologies.some((name) => name.toUpperCase() === filter.toUpperCase());
+
+    const typeMatch = !type || e.type.toUpperCase() === type.toUpperCase();
+
+    return filterMatch && typeMatch;
+  });
 
   return (
     <section className="py-32 bg-main">
