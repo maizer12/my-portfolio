@@ -3,6 +3,7 @@ import { HTag } from '../../common';
 import { Icon } from '@/common/Icon';
 import { defaultText, SkillsArr } from './constants';
 import { useState } from 'react';
+import AnimatedOnScroll from '../AnimatedOnScroll';
 
 const Skills = () => {
   const [desc, setDesc] = useState(defaultText);
@@ -32,17 +33,18 @@ const Skills = () => {
         </div>
         <ul className="flex gap-7 flex-wrap max-w-[670px] w-fit justify-center">
           {SkillsArr.map((e, i) => (
-            <li
-              className="bg-dark-900 w-32 rounded-[5px] border border-dark-400 h-32 flex justify-center items-center hover:border-primary-200 transform transition-transform duration-500 hover:scale-110"
-              onMouseEnter={() => hoverCard(e.desc)}
-              onMouseLeave={() => hoverCard(defaultText)}
-              key={i}
-            >
-              <Icon
-                icon={e.icon}
-                className="w-14 fill-primary-200 transform transition-transform duration-500 hover:fill-white hover:scale-110"
-              />
-            </li>
+            <AnimatedOnScroll key={i}>
+              <li
+                className="bg-dark-900 w-32 rounded-[5px] border border-dark-400 h-32 flex justify-center items-center hover:border-primary-200 transform transition-transform duration-500 hover:scale-110"
+                onMouseEnter={() => hoverCard(e.desc)}
+                onMouseLeave={() => hoverCard(defaultText)}
+              >
+                <Icon
+                  icon={e.icon}
+                  className="w-14 fill-primary-200 transform transition-transform duration-500 hover:fill-white hover:scale-110"
+                />
+              </li>
+            </AnimatedOnScroll>
           ))}
         </ul>
       </div>

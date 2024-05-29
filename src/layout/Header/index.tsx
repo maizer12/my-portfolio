@@ -1,7 +1,7 @@
 'use client';
 import { useState } from 'react';
 import style from './header.module.scss';
-import Link from 'next/link';
+import { Link } from '../../navigation';
 import Language from './Language';
 import Image from 'next/image';
 import BurgerButton from './BurgerButton';

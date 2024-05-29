@@ -18,7 +18,7 @@ const ProjectItem = ({ project }: IProps) => {
         {project.desc}
       </h5>
       <div className="flex items-center justify-between">
-        <Link href={'/project/' + project.id} className="text-primary-200 block mt-2" title={project.title}>
+        <Link href={'/projects/' + project.id} className="text-primary-200 block mt-2" title={project.title}>
           More info
         </Link>
         <div className="flex w-fit gap-3">

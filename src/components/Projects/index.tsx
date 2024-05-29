@@ -1,3 +1,4 @@
+import React from 'react';
 import { HTag, PTag } from '@/common';
 import MainButton from '@/common/MainButton';
 import { projectsArr } from './constants';
@@ -7,6 +8,7 @@ import { useTranslations } from 'next-intl';
 import ProjectItem from './ProjectItem';
 import ProjectDropdown from './ProjectDropdown';
 import ProjectFIlter from './ProjectFIlter';
+import AnimatedOnScroll from '../AnimatedOnScroll';
 
 interface IProps {
   filter?: string;
@@ -41,15 +43,21 @@ const Projects = ({ filter, type }: IProps) => {
           <ProjectFIlter type={type || ''} />
         </div>
         {!items.length && (
-          <PTag className="text-center min-h-[240px] flex items-center justify-center fadeInSlow">{t('notFound')}</PTag>
+          <AnimatedOnScroll>
+            <PTag className="text-center min-h-[240px] flex items-center justify-center fadeInSlow">
+              {t('notFound')}
+            </PTag>
+          </AnimatedOnScroll>
         )}
         <ul className="flex-wrap gap-6 max-w-[1224px] mx-auto grid md:grid-cols-2 lg:grid-cols-3 w-fit justify-center">
           {items.map((e) => (
-            <ProjectItem project={e} key={e.id} />
+            <AnimatedOnScroll key={e.id}>
+              <ProjectItem project={e} />
+            </AnimatedOnScroll>
           ))}
         </ul>
         <div className="mx-auto w-fit mt-12">
-          <MainButton>More Project</MainButton>
+          <MainButton>More Projects</MainButton>
         </div>
       </div>
     </section>

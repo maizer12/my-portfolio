@@ -39,12 +39,13 @@ export const Banner = () => {
         <div className={style.imageSlideIn}>
           <Image
             src={bannerImg.src}
-            className=""
+            className="imageSlideIn"
             width={619}
             height={567}
             alt="Developer picture"
             title="Developer picture!"
             data-twe-toggle="tooltip"
+            priority
           />
         </div>
       </div>

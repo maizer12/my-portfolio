@@ -6,8 +6,8 @@ export const getMenu = (t: any) => [
   },
   {
     id: 2,
-    title: t('portfolio'),
-    url: '/portfolio',
+    title: t('projects'),
+    url: '/projects',
   },
   {
     id: 3,

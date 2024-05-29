@@ -68,7 +68,14 @@
     transform: translateY(-5px);
   }
 }
+.iconBounce {
+  animation: bounce 1s;
+  animation-delay: 2s;
 
-.iconBounce:hover {
+  &:nth-child(2) {
+    animation-delay: 2.5s;
+  }
+}
+.linkHover:hover {
   animation: bounce 1s;
 }

@@ -41,6 +41,11 @@
     }
   }
 }
+.active {
+  a {
+    @apply after:scale-x-[1px] text-light-900;
+  }
+}
 .logo {
   a {
     color: #fff;
