@@ -3,11 +3,12 @@ import style from './mainButton.module.scss';
 
 interface IProps {
   children: ReactNode;
+  className?: string;
 }
 
-function MainButton({ children }: IProps) {
+function MainButton({ children, className = '' }: IProps) {
   return (
-    <button className={style.button + ' ' + style.new}>
+    <button className={style.button + ' ' + style.new + ' ' + className}>
       <span>{children}</span>
     </button>
   );
