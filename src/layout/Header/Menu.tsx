@@ -9,8 +9,6 @@ export const Menu = () => {
   const path = usePathname();
   const menu = getMenu(t);
 
-  console.log(path);
-
   return (
     <ul className="md:flex mt-8 md:gap-5 md:mt-0">
       {menu.map((e) => (

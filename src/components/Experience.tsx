@@ -16,8 +16,8 @@ const Experience = () => {
     <section className="bg-dark-700 p-3 py-16 md:p-0 md:py-24">
       <div className="max-w-[1220px] mx-auto w-full px-3 relative">
         <Block />
-        <AnimatedOnScroll>
-          <HTag tag="h2" className={`slideInLeft mb-4`}>
+        <AnimatedOnScroll animation="left">
+          <HTag tag="h2" className="mb-4">
             {t('title')}
           </HTag>
         </AnimatedOnScroll>
@@ -27,17 +27,19 @@ const Experience = () => {
             orientation="vertical"
             className="md:flex gap-20 items-start w-full"
           >
-            <TabsList className="flex md:flex-col h-auto">
-              {experienceTabs.triggers.map((trigger) => (
-                <TabsTrigger
-                  value={trigger.value}
-                  className="block md:pl-8 py-5 tab-item bg-dark-900 border-b md:border-l-2 w-full text-center md:min-w-[240px] md:w-auto md:text-start font-bold font-inter md:text-1xl text-light-900 md:border-b-0"
-                  key={trigger.value}
-                >
-                  {trigger.name}
-                </TabsTrigger>
-              ))}
-            </TabsList>
+            <AnimatedOnScroll animation="right">
+              <TabsList className="flex md:flex-col h-auto">
+                {experienceTabs.triggers.map((trigger) => (
+                  <TabsTrigger
+                    value={trigger.value}
+                    className="block md:pl-8 py-5 tab-item bg-dark-900 border-b md:border-l-2 w-full text-center md:min-w-[240px] md:w-auto md:text-start font-bold font-inter md:text-1xl text-light-900 md:border-b-0"
+                    key={trigger.value}
+                  >
+                    {trigger.name}
+                  </TabsTrigger>
+                ))}
+              </TabsList>
+            </AnimatedOnScroll>
             {experienceTabs.contents.map((content) => (
               <TabsContent value={content.value} className={`fadeIn p-0 w-full mt-6 md:mt-0`} key={content.company}>
                 <AnimatedOnScroll>

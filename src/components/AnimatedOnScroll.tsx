@@ -1,12 +1,19 @@
 'use client';
-import { ReactNode, useEffect } from 'react';
-import { motion, useAnimation } from 'framer-motion';
+import { ReactNode, useEffect, ElementType } from 'react';
+import { motion, useAnimation, Variants } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 
-const AnimatedOnScroll = ({ children }: { children: ReactNode }) => {
+interface AnimatedOnScrollProps {
+  children: ReactNode;
+  animation?: 'top' | 'left' | 'right';
+  tag?: ElementType;
+  className?: string;
+}
+
+const AnimatedOnScroll = ({ children, animation = 'top', tag = 'div', className }: AnimatedOnScrollProps) => {
   const controls = useAnimation();
   const { ref, inView } = useInView({
-    threshold: 0.2,
+    threshold: 0.5,
     triggerOnce: true,
   });
 
@@ -18,15 +25,42 @@ const AnimatedOnScroll = ({ children }: { children: ReactNode }) => {
     }
   }, [controls, inView]);
 
-  const variants = {
-    visible: { opacity: 1, y: 0 },
-    hidden: { opacity: 0, y: 100 },
+  const getVariants = (): Variants => {
+    switch (animation) {
+      case 'left':
+        return {
+          visible: { opacity: 1, x: 0 },
+          hidden: { opacity: 0, x: 100 },
+        };
+      case 'right':
+        return {
+          visible: { opacity: 1, x: 0 },
+          hidden: { opacity: 0, x: -100 },
+        };
+      case 'top':
+      default:
+        return {
+          visible: { opacity: 1, y: 0 },
+          hidden: { opacity: 0, y: 100 },
+        };
+    }
   };
 
+  const variants = getVariants();
+  //@ts-ignore
+  const MotionTag = motion[tag as keyof JSX.IntrinsicElements];
+
   return (
-    <motion.div ref={ref} animate={controls} initial="hidden" variants={variants} transition={{ duration: 0.6 }}>
+    <MotionTag
+      ref={ref}
+      animate={controls}
+      initial="hidden"
+      variants={variants}
+      transition={{ duration: 0.6 }}
+      className={className}
+    >
       {children}
-    </motion.div>
+    </MotionTag>
   );
 };
 

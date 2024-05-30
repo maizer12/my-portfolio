@@ -14,7 +14,7 @@ export const Banner = () => {
   const t = useTranslations('banner');
 
   return (
-    <section className={cn(style.banner, 'pt-18 bg-main')}>
+    <section className={cn(style.banner, 'pt-18 bg-main')} id="banner">
       <div className={cn(style.content, 'max-w-[1220px] banner')}>
         <div className={cn(style.text, style.textFadeIn)}>
           <a

@@ -7,26 +7,16 @@ export const getMenu = (t: any) => [
   {
     id: 2,
     title: t('projects'),
-    url: '/projects',
-  },
-  {
-    id: 3,
-    title: t('blog'),
-    url: '/blog',
+    url: '#projects',
   },
   {
     id: 4,
     title: t('aboutMe'),
-    url: '/about',
+    url: '#banner',
   },
   {
     id: 5,
     title: t('contact'),
-    url: '/contact',
-  },
-  {
-    id: 6,
-    title: t('dashboard'),
-    url: '/dashboard',
+    url: '#banner',
   },
 ];

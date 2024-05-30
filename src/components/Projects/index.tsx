@@ -27,7 +27,7 @@ const Projects = ({ filter, type }: IProps) => {
   });
 
   return (
-    <section className="py-32 bg-main">
+    <section className="py-32 bg-main" id="projects">
       <div className="container relative z-2">
         <div className="mb-16 max-w-[1324px] mx-auto">
           <div className="flex justify-between  mx-auto mb-12">
@@ -36,10 +36,12 @@ const Projects = ({ filter, type }: IProps) => {
             </HTag>
             <ProjectDropdown filter={filter || ''} />
           </div>
-          <Warning className="mb-7">
-            <OctagonAlert className="inline mr-2" />
-            {t('warning')}
-          </Warning>
+          <AnimatedOnScroll animation="left">
+            <Warning className="mb-7">
+              <OctagonAlert className="inline mr-2" />
+              {t('warning')}
+            </Warning>
+          </AnimatedOnScroll>
           <ProjectFIlter type={type || ''} />
         </div>
         {!items.length && (
@@ -50,10 +52,8 @@ const Projects = ({ filter, type }: IProps) => {
           </AnimatedOnScroll>
         )}
         <ul className="flex-wrap gap-6 max-w-[1224px] mx-auto grid md:grid-cols-2 lg:grid-cols-3 w-fit justify-center">
-          {items.map((e) => (
-            <AnimatedOnScroll key={e.id}>
-              <ProjectItem project={e} />
-            </AnimatedOnScroll>
+          {items.map((e, key) => (
+            <ProjectItem project={e} key={key} />
           ))}
         </ul>
         <div className="mx-auto w-fit mt-12">
