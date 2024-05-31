@@ -5,6 +5,11 @@ export const getMenu = (t: any) => [
     url: '/',
   },
   {
+    id: 1,
+    title: t('experience'),
+    url: '#experience',
+  },
+  {
     id: 2,
     title: t('projects'),
     url: '#projects',
@@ -12,11 +17,6 @@ export const getMenu = (t: any) => [
   {
     id: 4,
     title: t('aboutMe'),
-    url: '#banner',
-  },
-  {
-    id: 5,
-    title: t('contact'),
     url: '#banner',
   },
 ];

@@ -1,6 +1,7 @@
 {
   "menu": {
     "home": "Home",
+    "experience": "Experience",
     "projects": "Projects",
     "blog": "Blog",
     "aboutMe": "About Me",
@@ -39,5 +40,24 @@
     "title": "My Projects:",
     "notFound": "Not found, please try other filters!",
     "warning": "Please be aware that the projects listed below are pet projects, as I am currently only able to add personal projects to this section. Each project showcases different skills and technologies I've worked with. For professional experience and more detailed information, please refer to the other sections of my portfolio."
+  },
+  "skills": {
+    "title": "My Skills:",
+    "subtitle": "Description:",
+    "desc": "*passe o cursor do mouse no card para ler",
+    "items": {
+      "html": "I can create semantic and beautiful markup, familiar with HTML for more than 3 years",
+      "css": "Well acquainted with CSS3, able to create adaptive and cross-browser styles",
+      "sass": "I use the Sass preprocessor for convenient CSS writing",
+      "js": "I know JavaScript, I can write complex logic and interact with the DOM",
+      "react": "I use React to create SPA applications",
+      "vue": "Familiar with Vue.js, used for creating interfaces",
+      "next": "Working with Next.js for server-side rendering and static site generation",
+      "typescript": "I use TypeScript for typing and improving code stability",
+      "node": "I use Node.js to create server-side applications",
+      "socketio": "I work with Socket.io to implement real-time applications",
+      "wordpress": "I create websites on WordPress, familiar with its internal structure",
+      "bootstrap": "I use Bootstrap for quick layout and creating adaptive interfaces"
+    }
   }
 }

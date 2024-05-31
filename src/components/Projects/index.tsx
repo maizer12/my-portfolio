@@ -8,7 +8,7 @@ import { useTranslations } from 'next-intl';
 import ProjectItem from './ProjectItem';
 import ProjectDropdown from './ProjectDropdown';
 import ProjectFIlter from './ProjectFIlter';
-import AnimatedOnScroll from '../AnimatedOnScroll';
+import AnimatedOnScroll from '../../common/AnimatedOnScroll';
 
 interface IProps {
   filter?: string;

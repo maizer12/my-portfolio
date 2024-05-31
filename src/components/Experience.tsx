@@ -3,17 +3,17 @@ import { useTranslations } from 'next-intl';
 import { HTag } from '@/common';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/common/Tabs';
 import { Block } from './Block';
-import { getExperienceTabs } from '@/constants/experience';
+import { getExperienceTabs } from '@/constants/experience.constants';
 import { Icon } from '@/common/Icon';
 import { cilCalendar } from '@coreui/icons';
-import AnimatedOnScroll from './AnimatedOnScroll';
+import AnimatedOnScroll from '../common/AnimatedOnScroll';
 
 const Experience = () => {
   const t = useTranslations('experience');
   const experienceTabs = getExperienceTabs(t);
 
   return (
-    <section className="bg-dark-700 p-3 py-16 md:p-0 md:py-24">
+    <section className="bg-dark-700 p-3 py-16 md:p-0 md:py-24 min-h-[540px]" id="experience">
       <div className="max-w-[1220px] mx-auto w-full px-3 relative">
         <Block />
         <AnimatedOnScroll animation="left">

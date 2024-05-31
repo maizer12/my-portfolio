@@ -1,12 +1,16 @@
 'use client';
 import { HTag } from '../../common';
 import { Icon } from '@/common/Icon';
-import { defaultText, SkillsArr } from './constants';
 import { useState } from 'react';
-import AnimatedOnScroll from '../AnimatedOnScroll';
+import AnimatedOnScroll from '../../common/AnimatedOnScroll';
+import { useTranslations } from 'next-intl';
+import { getSkills } from '@/constants/skills.constants';
 
 const Skills = () => {
+  const t = useTranslations('skills');
+  const defaultText = t('desc');
   const [desc, setDesc] = useState(defaultText);
+  const skills = getSkills(t);
 
   const hoverCard = (str: string) => {
     setDesc('');
@@ -18,12 +22,12 @@ const Skills = () => {
   return (
     <section className="bg-dark-700 py-16 md:py-32 p-3">
       <HTag tag="h2" className="text-center mb-4">
-        My Skills:
+        {t('title')}
       </HTag>
       <div className="max-w-[1200px] mx-auto w-full md:flex justify-between mt-16">
         <div className="mb-8">
           <HTag tag="h5" className="mb-4">
-            Description:
+            {t('subtitle')}
           </HTag>
           {!!desc && (
             <h5 className="block text-light-400 min-w-[240px] text-start font-bold font-inter text-1xl fadeInSlow">
@@ -32,7 +36,7 @@ const Skills = () => {
           )}
         </div>
         <ul className="flex gap-7 flex-wrap max-w-[670px] w-fit justify-center">
-          {SkillsArr.map((e, i) => (
+          {skills.map((e, i) => (
             <AnimatedOnScroll key={i} tag="li">
               <div
                 className="bg-dark-900 w-32 rounded-[5px] border border-dark-400 h-32 flex justify-center items-center hover:border-primary-200 transform transition-transform duration-500 hover:scale-110"

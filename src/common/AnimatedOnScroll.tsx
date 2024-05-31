@@ -8,12 +8,13 @@ interface AnimatedOnScrollProps {
   animation?: 'top' | 'left' | 'right';
   tag?: ElementType;
   className?: string;
+  speed?: number;
 }
 
-const AnimatedOnScroll = ({ children, animation = 'top', tag = 'div', className }: AnimatedOnScrollProps) => {
+const AnimatedOnScroll = ({ children, animation = 'top', tag = 'div', className, speed }: AnimatedOnScrollProps) => {
   const controls = useAnimation();
   const { ref, inView } = useInView({
-    threshold: 0.5,
+    threshold: speed ? speed : 0.5,
     triggerOnce: true,
   });
 

@@ -3,7 +3,7 @@ import { Link } from '../../navigation';
 import { HTag } from '@/common';
 import { Icon } from '@/common/Icon';
 import { IProject } from '@/models/Project.type';
-import AnimatedOnScroll from '../AnimatedOnScroll';
+import AnimatedOnScroll from '../../common/AnimatedOnScroll';
 
 interface IProps {
   project: IProject;
