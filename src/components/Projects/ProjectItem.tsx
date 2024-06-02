@@ -13,13 +13,13 @@ const ProjectItem = ({ project }: IProps) => {
   return (
     <AnimatedOnScroll tag="li">
       <div
-        className="border w-full min-w-[320px] border-primary-200 bg-dark-700 p-8 h-fit fadeInSlow"
+        className="border w-full min-w-[320px] border-primary-200 bg-dark-700 p-8 h-fit fadeInSlow flex flex-col"
         key={project.title}
       >
         <HTag tag="h5" className="mb-4">
           {project.title}
         </HTag>
-        <h5 className="block text-light-400 min-w-[240px] text-start font-bold font-inter text-1xl mb-6">
+        <h5 className="block text-light-400 min-w-[240px] text-start font-bold font-inter text-1xl mb-6 h-[98px]">
           {project.desc}
         </h5>
         <div className="flex items-center justify-between">
